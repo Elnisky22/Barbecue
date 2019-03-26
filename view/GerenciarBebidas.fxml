@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vBoxGerenciarBebidas" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GerenciarBebidasController">
+   <children>
+      <Pane fx:id="paneGerenciarBebidas" prefHeight="496.0" prefWidth="800.0">
+         <children>
+            <TableView fx:id="tbGerenciarBebidas" layoutX="197.0" layoutY="90.0" prefHeight="406.0" prefWidth="406.0">
+              <columns>
+                <TableColumn fx:id="tcolumnBebidaId" prefWidth="67.0" text="Bebida ID" />
+                <TableColumn fx:id="tcolumnNome" prefWidth="205.0" text="Nome" />
+                  <TableColumn fx:id="tcolumnQuantidade" prefWidth="64.0" text="Estoque" />
+                  <TableColumn fx:id="tcolumnValor" prefWidth="68.0" text="Valor" />
+              </columns>
+            </TableView>
+            <HBox fx:id="hBoxEstoque" alignment="CENTER" layoutX="603.0" layoutY="225.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <TextField fx:id="txfEstoque" prefHeight="25.0" prefWidth="112.0" promptText="Repor Estoque" />
+                  <Button fx:id="btnReporEstoque" mnemonicParsing="false" onAction="#btnReporEstoqueOnAction" text="Repor" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <HBox fx:id="hbGerenciarBebidas" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+         <children>
+            <Button fx:id="btnVoltar" mnemonicParsing="false" onAction="#btnVoltarOnAction" text="Voltar">
+               <HBox.margin>
+                  <Insets right="100.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnAdicionar" mnemonicParsing="false" onAction="#btnAdicionarOnAction" text="Adicionar" />
+            <Button fx:id="btnRemover" mnemonicParsing="false" onAction="#btnRemoverOnAction" text="Remover" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
